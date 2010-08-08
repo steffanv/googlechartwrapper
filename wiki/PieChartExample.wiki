@@ -86,6 +86,12 @@ We have defined a gradient from blue to red.
 
 <img src="http://chart.apis.google.com/chart?cht=p&chs=300x200&chco=0000ff,ff0000&chd=e:SStt...&nonsense=something_that_ends_with.png" /> 
 
+A _LinearGradient_ from green to blue with an angle of 45 degrees.
+{{{
+pieChart.setLinearGradient(new LinearGradient(LinearGradient.GradientFillDestination.Background,45,Color.GREEN,0.5f,Color.BLUE,0.9f));
+}}}
+
+<img src="http://chart.apis.google.com/chart?cht=p&chs=300x200&chd=e:SStt..&chf=bg,lg,45,00ff00,0.5,0000ff,0.9&nonsense=something_that_ends_with.png" /> 
 = Some misc stuff =
 
 Lets try the _set3D_ method
