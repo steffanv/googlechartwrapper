@@ -50,8 +50,23 @@ pieChart.addPieChartSlice(new PieChartSlice.PieChartSliceBuilder(30).label("labe
 
 <img src="http://chart.apis.google.com/chart?cht=p&chs=300x200&chco=ff9d0a,000000,ff9d0a&chd=e:Zm..mZ&chl=|black|label&nonsense=something_that_ends_with.png" /> 
 
-= Details =
+It is also possible to change the value, color or text after creating the object with the builder pattern via setter methods.
 
+{{{
+PieChartSlice slice = new PieChartSlice.PieChartSliceBuilder(30).label("label").build();
+slice.setLabel("new label");
+pieChart.addPieChartSlice(slice);
+}}}
+
+= Some misc stuff =
+
+Lets try the _set3D_ method
+
+{{{
+pieChart.set3D();
+}}}
+
+<img src="http://chart.apis.google.com/chart?cht=p3&chs=300x200&chd=e:SStt..&nonsense=something_that_ends_with.png" /> 
 Add your content here.  Format your content with:
   * Text in *bold* or _italic_
   * Headings, paragraphs, and lists
