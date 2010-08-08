@@ -4,6 +4,38 @@ We show how to build a Pie Chart.
 
 Add your content here.
 
+= A Simple Example =
+
+Like other charts the first step is the size.
+
+{{{
+PieChart pieChart = new PieChart(new Dimension(300,300));
+}}}
+
+But whats about the data?
+Lets say you have the values 50,20 and 30.
+
+{{{
+ pieChart.addPieChartSlice(new PieChartSlice.PieChartSliceBuilder(20).build());
+ pieChart.addPieChartSlice(new PieChartSlice.PieChartSliceBuilder(50).build());
+ pieChart.addPieChartSlice(new PieChartSlice.PieChartSliceBuilder(30).build());
+}}}
+
+Looks complicated? Okay I will explain this step by step.
+There are two ways to add data. In this case we use the _addPieChartSlice_ method. The expected _PieChartSlice_
+base upon the builder pattern. This means we have a some required parameters and some optional parameters. In this case the data value is required. This is what we get with the first example.
+
+<img src="http://chart.apis.google.com/chart?cht=p&chs=300x300&chd=e:Zm..mZ&nonsense=something_that_ends_with.png" /> 
+
+{{{
+PieChart pieChart = new PieChart(new Dimension(300,300));
+
+ pieChart.addPieChartSlice(new PieChartSlice.PieChartSliceBuilder(20).build());
+ pieChart.addPieChartSlice(new PieChartSlice.PieChartSliceBuilder(50).build());
+ pieChart.addPieChartSlice(new PieChartSlice.PieChartSliceBuilder(30).build());
+}}}
+
+= More about the builder pattern =
 
 = Details =
 
