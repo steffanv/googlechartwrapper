@@ -1,8 +1,6 @@
-We show how to build a Pie Chart.
-
 = Introduction =
 
-Add your content here.
+We created a _AbstractPieChart_ and the two derived classes _PieChart_ and _ConcentricPieChart_. This wiki page deals with the _PieChart_.
 
 = A Simple Example =
 
@@ -67,7 +65,3 @@ pieChart.set3D();
 }}}
 
 <img src="http://chart.apis.google.com/chart?cht=p3&chs=300x200&chd=e:SStt..&nonsense=something_that_ends_with.png" /> 
-Add your content here.  Format your content with:
-  * Text in *bold* or _italic_
-  * Headings, paragraphs, and lists
-  * Automatic links to other wiki pages
