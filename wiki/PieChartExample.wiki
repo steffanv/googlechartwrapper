@@ -93,6 +93,7 @@ pieChart.setLinearGradient(new LinearGradient(LinearGradient.GradientFillDestina
 
 <img src="http://chart.apis.google.com/chart?cht=p&chs=300x200&chd=e:SStt..&chf=bg,lg,45,00ff00,0.5,0000ff,0.9&nonsense=something_that_ends_with.png" /> 
 
+The _LinearStripe_ is very similar to the _LinearGradient_ 
 {{{
 pieChart.setLinearStripes(new LinearStripe(LinearStripe.LinearStripesDestination.Background,45,Color.RED,0.3f,Color.GREEN,0.8f));
 }}}
@@ -108,3 +109,7 @@ pieChart.set3D();
 }}}
 
 <img src="http://chart.apis.google.com/chart?cht=p3&chs=300x200&chd=e:SStt..&nonsense=something_that_ends_with.png" /> 
+
+= Nearly complete Example =
+
+<img src="http://chart.apis.google.com/chart?cht=p3&chs=400x200&chco=ffc800,c0c0c0,ff0000&chd=e:Kr1V..&chdl=one|two|three&chdlp=r&chf=bg,lg,45,ffffff,0.5,c0c0c0,0.9&chl=one|two|three&chtt=Title&chts=000000,24&nonsense=something_that_ends_with.png" /> 
