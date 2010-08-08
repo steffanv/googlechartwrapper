@@ -56,6 +56,15 @@ slice.setLabel("new label");
 pieChart.addPieChartSlice(slice);
 }}}
 
+= Its all about the color =
+
+The so called _SolidFill_ needs a destination, in this case the charts background and a color.
+{{{
+pieChart.addSolidFill(new SolidFill(SolidFill.ChartFillDestination.Background,Color.GRAY));
+}}}
+
+<img src="http://chart.apis.google.com/chart?cht=p&chs=300x200&chd=e:SStt..&chf=bg,s,808080&nonsense=something_that_ends_with.png" /> 
+
 = Some misc stuff =
 
 Lets try the _set3D_ method
