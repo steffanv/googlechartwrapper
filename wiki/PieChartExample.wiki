@@ -9,16 +9,16 @@ Add your content here.
 Like other charts the first step is the size.
 
 {{{
-PieChart pieChart = new PieChart(new Dimension(300,300));
+PieChart pieChart = new PieChart(new Dimension(300,200));
 }}}
 
 But whats about the data?
 Lets say you have the values 50,20 and 30.
 
 {{{
- pieChart.addPieChartSlice(new PieChartSlice.PieChartSliceBuilder(20).build());
- pieChart.addPieChartSlice(new PieChartSlice.PieChartSliceBuilder(50).build());
- pieChart.addPieChartSlice(new PieChartSlice.PieChartSliceBuilder(30).build());
+pieChart.addPieChartSlice(new PieChartSlice.PieChartSliceBuilder(20).build());
+pieChart.addPieChartSlice(new PieChartSlice.PieChartSliceBuilder(50).build());
+pieChart.addPieChartSlice(new PieChartSlice.PieChartSliceBuilder(30).build());
 }}}
 
 Looks complicated? Okay I will explain this step by step.
@@ -28,14 +28,27 @@ base upon the builder pattern. This means we have a some required parameters and
 <img src="http://chart.apis.google.com/chart?cht=p&chs=300x300&chd=e:Zm..mZ&nonsense=something_that_ends_with.png" /> 
 
 {{{
-PieChart pieChart = new PieChart(new Dimension(300,300));
+PieChart pieChart = new PieChart(new Dimension(300,200));
 
- pieChart.addPieChartSlice(new PieChartSlice.PieChartSliceBuilder(20).build());
- pieChart.addPieChartSlice(new PieChartSlice.PieChartSliceBuilder(50).build());
- pieChart.addPieChartSlice(new PieChartSlice.PieChartSliceBuilder(30).build());
+pieChart.addPieChartSlice(new PieChartSlice.PieChartSliceBuilder(20).build());
+pieChart.addPieChartSlice(new PieChartSlice.PieChartSliceBuilder(50).build());
+pieChart.addPieChartSlice(new PieChartSlice.PieChartSliceBuilder(30).build());
 }}}
 
 = More about the builder pattern =
+
+There are two optional parameters, the color and a label text. As you can see you are not forced to define a color or
+label. To give you this piece of freedom we decided to use the builder pattern
+
+{{{
+PieChart pieChart = new PieChart(new Dimension(300,200));
+
+pieChart.addPieChartSlice(new PieChartSlice.PieChartSliceBuilder(20).build());
+pieChart.addPieChartSlice(new PieChartSlice.PieChartSliceBuilder(50).label("black").color(Color.BLACK).build());
+pieChart.addPieChartSlice(new PieChartSlice.PieChartSliceBuilder(30).label("label").build());
+}}}
+
+<img src="http://chart.apis.google.com/chart?cht=p&chs=300x200&chco=ff9d0a,000000,ff9d0a&chd=e:Zm..mZ&chl=|black|label&nonsense=something_that_ends_with.png" /> 
 
 = Details =
 
