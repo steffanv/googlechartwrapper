@@ -1,6 +1,6 @@
 = Introduction =
 
-We created a _AbstractPieChart_ and the two derived classes _PieChart_ and _ConcentricPieChart_. This wiki page deals with the _PieChart__.
+We created a _AbstractPieChart_ and the two derived classes _PieChart_ and _ConcentricPieChart_. This wiki page deals with the _PieChart*_.
 
 = A Simple Example =
 
