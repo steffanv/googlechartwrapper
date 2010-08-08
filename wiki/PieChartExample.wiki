@@ -65,6 +65,27 @@ pieChart.addSolidFill(new SolidFill(SolidFill.ChartFillDestination.Background,Co
 
 <img src="http://chart.apis.google.com/chart?cht=p&chs=300x200&chd=e:SStt..&chf=bg,s,808080&nonsense=something_that_ends_with.png" /> 
 
+You have seen that it is possible to define the color for each slice moreover you can add a single color or more with the _addChartColor_ method.
+
+{{{
+pieChart.addChartColor(new ChartColor(Color.BLUE));
+}}}
+
+As you can see the whole chart have blue gradations.
+
+<img src="http://chart.apis.google.com/chart?cht=p&chs=300x200&chco=0000ff&chd=e:SStt..&nonsense=something_that_ends_with.png" /> 
+
+But what happens if we add two colors?
+
+{{{
+pieChart.addChartColor(new ChartColor(Color.BLUE));
+pieChart.addChartColor(new ChartColor(Color.RED));
+}}}
+
+We have defined a gradient from blue to red.
+
+<img src="http://chart.apis.google.com/chart?cht=p&chs=300x200&chco=0000ff,ff0000&chd=e:SStt...&nonsense=something_that_ends_with.png" /> 
+
 = Some misc stuff =
 
 Lets try the _set3D_ method
