@@ -3,7 +3,7 @@
 
 We created a _AbstractPieChart_ and the two derived classes _PieChart_ and _ConcentricPieChart_. This wiki page deals with the _PieChart*_.
 
-= A Simple Example =
+= A simple example =
 
 Like other charts the first step is the size.
 
@@ -111,7 +111,7 @@ pieChart.set3D();
 
 <img src="http://chart.apis.google.com/chart?cht=p3&chs=300x200&chd=e:SStt..&nonsense=something_that_ends_with.png" /> 
 
-= Nearly complete Example =
+= Nearly complete example =
 
 {{{
 PieChart pieChart = new PieChart(new Dimension(400,200));
