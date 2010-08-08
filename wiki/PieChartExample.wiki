@@ -92,6 +92,13 @@ pieChart.setLinearGradient(new LinearGradient(LinearGradient.GradientFillDestina
 }}}
 
 <img src="http://chart.apis.google.com/chart?cht=p&chs=300x200&chd=e:SStt..&chf=bg,lg,45,00ff00,0.5,0000ff,0.9&nonsense=something_that_ends_with.png" /> 
+
+{{{
+pieChart.setLinearStripes(new LinearStripe(LinearStripe.LinearStripesDestination.Background,45,Color.RED,0.3f,Color.GREEN,0.8f));
+}}}
+
+<img src="http://chart.apis.google.com/chart?cht=p&chs=300x200&chd=e:SStt..&chf=bg,ls,45,ff0000,0.3,00ff00,0.8&nonsense=something_that_ends_with.png" />
+
 = Some misc stuff =
 
 Lets try the _set3D_ method
