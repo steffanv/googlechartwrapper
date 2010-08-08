@@ -112,4 +112,20 @@ pieChart.set3D();
 
 = Nearly complete Example =
 
+{{{
+PieChart pieChart = new PieChart(new Dimension(400,200));
+
+pieChart.setChartTitle(new ChartTitle("Title",Color.BLACK,24));
+
+pieChart.addPieChartSlice(new PieChartSlice.PieChartSliceBuilder(10).label("one").color(Color.ORANGE).build());
+pieChart.addPieChartSlice(new PieChartSlice.PieChartSliceBuilder(50).label("two").color(Color.LIGHT_GRAY).build());
+pieChart.addPieChartSlice(new PieChartSlice.PieChartSliceBuilder(60).label("three").color(Color.RED).build());
+
+pieChart.setChartLegend(new ChartLegend(Arrays.asList("one","two","three")));
+
+pieChart.setLinearGradient(new LinearGradient(LinearGradient.GradientFillDestination.Background,45,Color.WHITE,0.5f,Color.LIGHT_GRAY,0.9f));
+
+pieChart.set3D();
+}}}
+
 <img src="http://chart.apis.google.com/chart?cht=p3&chs=400x200&chco=ffc800,c0c0c0,ff0000&chd=e:Kr1V..&chdl=one|two|three&chdlp=r&chf=bg,lg,45,ffffff,0.5,c0c0c0,0.9&chl=one|two|three&chtt=Title&chts=000000,24&nonsense=something_that_ends_with.png" /> 
