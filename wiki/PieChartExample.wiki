@@ -1,7 +1,7 @@
 #labels Featured,Example
 = Introduction =
 
-We created a _AbstractPieChart_ and the two derived classes _PieChart_ and _ConcentricPieChart_. This wiki page deals with the _PieChart*_.
+We created a _AbstractPieChart_ and the two derived classes _PieChart_ and _ConcentricPieChart_. This wiki page deals with the _PieChart_. Pie charts are good for showing simple proportional part-to-whole information. Javadoc can be found online: [http://www.toolforge.de/javadoc/googlechartwrapper/de/toolforge/googlechartwrapper/PieChart.html PieChart javadoc].
 
 = A simple example =
 
@@ -23,6 +23,8 @@ pieChart.addPieChartSlice(new PieChartSlice.PieChartSliceBuilder(30).build());
 Looks complicated? Okay I will explain this step by step.
 There are two ways to add data. In this case we use the _addPieChartSlice_ method. The expected _PieChartSlice_
 base upon the builder pattern. This means we have a some required parameters and some optional parameters. In this case the data value is required. This is what we get with the first example.
+
+*Tip*: You don't have to calculate the percentage values yourself. Just use the raw numbers and the chart will automatically calculate percentages based on the total and individual numbers. (e.g. inputs 20 and 40 will be automatically converted into 33% and 66%)
 
 <img src="http://chart.apis.google.com/chart?cht=p&chs=300x300&chd=e:Zm..mZ&nonsense=something_that_ends_with.png" /> 
 
@@ -46,6 +48,8 @@ pieChart.addPieChartSlice(new PieChartSlice.PieChartSliceBuilder(20).build());
 pieChart.addPieChartSlice(new PieChartSlice.PieChartSliceBuilder(50).label("black").color(Color.BLACK).build());
 pieChart.addPieChartSlice(new PieChartSlice.PieChartSliceBuilder(30).label("label").build());
 }}}
+
+*Limitation*: Keep in mind that in order to display the labels, the chart width needs to be bigger than the chart height. If not the labels are only partially displayed, because the chart is not wide enough. (see http://code.google.com/intl/de/apis/chart/docs/gallery/pie_charts.html#pie_chart_label)
 
 <img src="http://chart.apis.google.com/chart?cht=p&chs=300x200&chco=ff9d0a,000000,ff9d0a&chd=e:Zm..mZ&chl=|black|label&nonsense=something_that_ends_with.png" /> 
 
@@ -72,7 +76,7 @@ You have seen that it is possible to define the color for each slice moreover yo
 pieChart.addChartColor(new ChartColor(Color.BLUE));
 }}}
 
-As you can see the whole chart have blue gradations.
+As you can see the whole chart has blue gradations.
 
 <img src="http://chart.apis.google.com/chart?cht=p&chs=300x200&chco=0000ff&chd=e:SStt..&nonsense=something_that_ends_with.png" /> 
 
@@ -111,7 +115,7 @@ pieChart.set3D();
 
 <img src="http://chart.apis.google.com/chart?cht=p3&chs=300x200&chd=e:SStt..&nonsense=something_that_ends_with.png" /> 
 
-= Nearly complete example =
+= Almost complete example =
 
 {{{
 PieChart pieChart = new PieChart(new Dimension(400,200));
@@ -130,3 +134,5 @@ pieChart.set3D();
 }}}
 
 <img src="http://chart.apis.google.com/chart?cht=p3&chs=400x200&chco=ffc800,c0c0c0,ff0000&chd=e:Kr1V..&chdl=one|two|three&chdlp=r&chf=bg,lg,45,ffffff,0.5,c0c0c0,0.9&chl=one|two|three&chtt=Title&chts=000000,24&nonsense=something_that_ends_with.png" /> 
+
+Further documentation is available in the javadoc: http://www.toolforge.de/javadoc/googlechartwrapper/de/toolforge/googlechartwrapper/PieChart.html
