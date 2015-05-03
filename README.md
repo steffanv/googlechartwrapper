@@ -1,3 +1,6 @@
+Google decided a long time ago to dicontinue the chart api. After the announcment we also stopped working on the API. However, we think that the code and some ideas are still relevant.
+After Google announced to shut down Google Code we moved the project to GitHub.
+
 # googlechartwrapper
 Automatically exported from code.google.com/p/googlechartwrapper
 
